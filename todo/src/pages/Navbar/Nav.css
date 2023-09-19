@@ -20,6 +20,19 @@ nav {
   display: flex;
   align-items: center;
 }
+.hidden {
+  display: flex;
+  align-items: center;
+}
+.hidden li {
+  list-style-type: none;
+}
+.hidden a {
+  padding: 5px;
+  margin: 0px 25px;
+  text-decoration: none;
+  font-weight: bold;
+}
 .navbar li {
   list-style-type: none;
 }
@@ -50,6 +63,24 @@ nav {
     padding: 10px 0px;
   }
 } */
+.nav-in button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+.nav-in button:hover {
+  background-color: #0056b3;
+}
 
 .nav-in {
   display: flex;
