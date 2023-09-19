@@ -1,0 +1,53 @@
+# Ignore compiled Python files
+*.pyc
+__pycache__/
+*.pyo
+
+# Ignore the virtual environment (if you're using one)
+venv/
+
+# Ignore environment-specific settings
+.env
+
+# Ignore database files
+db.sqlite3
+
+# Ignore static and media files (if served separately)
+/staticfiles/
+/media/
+
+# Ignore node_modules directory (for React)
+node_modules/
+
+# Ignore the build directory (for React)
+build/
+
+# Ignore editor-specific files
+.vscode/
+.idea/
+
+# Ignore logs and temporary files
+*.log
+*.swp
+*.swo
+*~
+
+# Ignore deployment files (e.g., Heroku)
+*.pyc
+*.pyo
+*.db
+*.sqlite3
+*.pyc
+*.pyo
+*.pyc
+*.pyo
+*.pyc
+*.pyo
+
+# Ignore sensitive or environment-specific information
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+.env.local
