@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { AiOutlineDelete, AiOutlineEdit } from "react-icons/ai";
 import "./Home.css";
 const Home = () => {
   const [data, setData] = useState([]);
@@ -86,71 +87,55 @@ const Home = () => {
 
   return (
     <div className="container">
-      <div className="form-container">
-        <form className="form-data">
-          <div className="form-group">
-            <label htmlFor="">Title</label>
+      <div className="maincontainer">
+      <form className="form-data">
+           
             <input
+            className="input-field"
               name="title"
+              placeholder="TITLE"
               value={postdata}
               onChange={(e) => setPostdata(e.target.value)}
               type="text"
             />
-          </div>
+
+            
+           
           <div className="form-group">
-            {showedit ? (
-              <button onClick={() => updateData(editid)}>update</button>
-            ) : (
-              <button onClick={addData}>add</button>
-            )}
-          </div>
-          {/* <div className="form-group">
-              <label htmlFor="">Content</label>
-              <input
-                value={contentdata}
-                onChange={(e) => setContentdata(e.target.value)}
-                name="content"
-                type="text"
-              />
-            </div> */}
+              {showedit ? (
+                <button onClick={() => updateData(editid)}>update</button>
+              ) : (
+                <button onClick={addData}>add</button>
+              )}
+            </div>
         </form>
 
-        {/* <div>
-          {data.map((todo) => (
-            <div key={todo.id} todo={todo}>
-              <p>{todo.title}</p>
-              <button onClick={() => editData(todo.id)}>update</button>
-              <button onClick={() => deletePost(todo.id)}>delete</button>
-            </div>
-          ))}
-        </div> */}
-        {data.map((tdata) =>
-        <div className="table-container" tdata={tdata} key={tdata.id}>
+        <div className="table-container1">
+        {data.map((tdata) => (
+          <div className="table-container" tdata={tdata} key={tdata.id}>
             <table>
-           <thead>
-             <tr>
-               <th>Id</th>
-               <th>Title</th>
-               <th>Edit</th>
-               <th>Delete</th>
-             </tr>
-           </thead>
-           <tbody>
-             <tr>
-               <td>{tdata.id}</td>
-               <td>{tdata.title}</td>
-               <td className="button-container">
-               <button onClick={() => editData(tdata.id)}>update</button>
-               </td>
-               <td>
-               <button onClick={() => deletePost(tdata.id)}>delete</button>
-               </td>
-             </tr>
-           </tbody>
-         </table>
- 
+               
+              <tbody>
+                <tr>
+                  <td>{tdata.id}</td>
+                  <td>{tdata.title}</td>
+                  <td className="button-container">
+                    <button onClick={() => editData(tdata.id)}>
+                      <AiOutlineEdit size={25} color="black" />
+                    </button>
+                  </td>
+                  <td>
+                    <button onClick={() => deletePost(tdata.id)}>
+                      {" "}
+                      <AiOutlineDelete size={25} color="red" />{" "}
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        ))}
         </div>
-        )}
       </div>
     </div>
   );

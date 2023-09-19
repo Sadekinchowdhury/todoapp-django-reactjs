@@ -8,7 +8,7 @@
   align-items: center;
   justify-content: center;
 }
-.form-container {
+/* .form-container {
   background-color: #f9fff6;
   padding: 20px;
   border: 1px solid gainsboro;
@@ -16,7 +16,7 @@
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
   max-width: 400px;
   width: 100%;
-}
+} */
 .form-input {
   margin: 10px;
   gap: 100px;
@@ -25,14 +25,19 @@
 .form-data {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 30px;
 }
-.form-data label {
+.input-field {
+  flex: 70%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+/* .form-data label {
   font-weight: bold;
   display: block;
   margin-bottom: 5px;
-}
+} */
 
 .form-group input {
   width: 100%;
@@ -42,7 +47,6 @@
 }
 
 .form-group button {
-  margin-top: 20px;
   padding: 10px 20px;
   background-color: #007bff;
   color: #fff;
@@ -54,18 +58,29 @@
 .form-group button:hover {
   background-color: #0056b3;
 }
-
+.table-container1 {
+  padding: 15px;
+  margin-top: 40px;
+  border-radius: 10px;
+  box-shadow: 2px 4px 8px 5px rgba(0, 0, 5, 0.1);
+  background-color: #fff;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
 .table-container {
+  border-radius: 10px;
   border-collapse: collapse;
-  margin-top: 30px;
+
   width: 100%;
 }
-th,
+
 td {
-  border: 1px solid #ccc;
   padding: 8px;
   text-align: left;
 }
-th {
-  background-color: #f2f2f2;
+
+.table-container button {
+  border: none;
+  size: 200px;
+  cursor: pointer;
 }
