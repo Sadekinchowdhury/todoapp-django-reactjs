@@ -56,7 +56,7 @@ const Home = () => {
   const editData = (id) => {
     setEditid(id);
 
-    fetch(`http://127.0.0.1:8000/${id}`)
+    fetch(`http://127.0.0.1:8000/${id}/`)
       .then((res) => res.json())
       .then((data) => {
         setPostdata(data.title);
@@ -66,6 +66,7 @@ const Home = () => {
 
   // update data
   const updateData = (id) => {
+    
     const data = {
       title: postdata,
     };
@@ -110,34 +111,32 @@ const Home = () => {
             </div>
         </form>
 
-     {
-      data.length > 0  &&    <div className="table-container1">
-      {data.map((tdata) => (
-        <div className="table-container" tdata={tdata} key={tdata.id}>
-          <table>
-             
-            <tbody>
-              <tr>
-                <td>{tdata.id}</td>
-                <td>{tdata.title}</td>
-                <td className="button-container">
-                  <button onClick={() => editData(tdata.id)}>
-                    <AiOutlineEdit size={25} color="black" />
-                  </button>
-                </td>
-                <td>
-                  <button onClick={() => deletePost(tdata.id)}>
-                    {" "}
-                    <AiOutlineDelete size={25} color="red" />{" "}
-                  </button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <div className="table-container1">
+        {data.map((tdata) => (
+          <div className="table-container" tdata={tdata} key={tdata.id}>
+            <table>
+               
+              <tbody>
+                <tr>
+                  <td>{tdata.id}</td>
+                  <td>{tdata.title}</td>
+                  <td className="button-container">
+                    <button onClick={() => editData(tdata.id)}>
+                      <AiOutlineEdit size={25} color="black" />
+                    </button>
+                  </td>
+                  <td>
+                    <button onClick={() => deletePost(tdata.id)}>
+                       
+                      <AiOutlineDelete size={25} color="red" />
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        ))}
         </div>
-      ))}
-      </div>
-     }
       </div>
     </div>
   );
