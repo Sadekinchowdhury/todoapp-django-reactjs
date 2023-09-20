@@ -111,7 +111,8 @@ const Home = () => {
             </div>
         </form>
 
-        <div className="table-container1">
+      {
+        data.length > 0 &&   <div className="table-container1">
         {data.map((tdata) => (
           <div className="table-container" tdata={tdata} key={tdata.id}>
             <table>
@@ -137,6 +138,7 @@ const Home = () => {
           </div>
         ))}
         </div>
+      }
       </div>
     </div>
   );

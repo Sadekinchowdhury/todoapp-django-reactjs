@@ -24,7 +24,7 @@ const Navbar = () => {
          <button>GetStarted</button>
             <div onClick={showToggle} className='bx bx-menu' id='menu-icon'>
                 {
-                    toggle ?<ImCross size={25}/>: <AiOutlineMenu size={25}/> 
+                    toggle ?<AiOutlineMenu size={25}/> :<ImCross size={25}/> 
                 }
             
             
